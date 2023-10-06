@@ -16,3 +16,17 @@ public class Main {
         } catch (Exception e) {
             getOutput("Exception: " + e.getMessage());
         }
+    }
+
+    private static String getResult(TrafficLightColor color) {
+        return switch (color) {
+            case RED -> "Заборона руху";
+            case YELLOW -> "Приготуватися";
+            case GREEN -> "Рух дозволено.";
+        };
+    }
+
+    private static void getOutput(String output) {
+        System.out.println(output);
+    }
+}
